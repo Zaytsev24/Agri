@@ -1,0 +1,17 @@
+agri_control/
+├─ lib/
+│   ├─ main.dart
+│   ├─ screens/
+│   │   ├─ animals.dart
+│   │   ├─ machinery.dart
+│   │   ├─ finance_analytics.dart
+│   │   └─ tasks.dart
+│   └─ services/
+│       ├─ db_service.dart
+│       └─ notification_service.dart
+├─ ios/        <-- Flutter автоматически создаст при flutter create .
+├─ android/    <-- Flutter автоматически создаст при flutter create .
+├─ pubspec.yaml
+├─ codemagic.yaml
+├─ README.md
+└─ .gitignore
