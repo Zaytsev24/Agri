@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 
-class FinanceAnalyticsScreen extends StatelessWidget {
+class FinanceScreen extends StatelessWidget {
+  const FinanceScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text('Finance & Analytics')));
+    return Scaffold(
+      appBar: AppBar(title: const Text('Финансы и аналитика')),
+      body: const Center(
+        child: Text('Здесь будут графики, расходы по кормам, технике, животным'),
+      ),
+    );
   }
 }
