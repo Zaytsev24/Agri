@@ -8,6 +8,10 @@ workflows:
       vars:
         CERT_PASSWORD: Encrypted(...)  # пароль от .p12
     scripts:
+       - name: Create Flutter iOS folder
+  script: |
+    flutter create .
+
       - name: Get dependencies
         script: |
           flutter pub get
