@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
 class TasksScreen extends StatelessWidget {
+  const TasksScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text('Tasks')));
+    return Scaffold(
+      appBar: AppBar(title: const Text('Задачи')),
+      body: const Center(child: Text('Здесь будет контроль выполнения задач')),
+    );
   }
 }
