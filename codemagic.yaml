@@ -1,0 +1,27 @@
+workflows:
+  ios_release:
+    name: iOS Release
+    max_build_duration: 60
+    environment:
+      flutter: stable
+      xcode: latest
+      vars:
+        CERT_PASSWORD: Encrypted(...)  # пароль от .p12
+    scripts:
+      - name: Get dependencies
+        script: |
+          flutter pub get
+      - name: Build iOS
+        script: |
+          flutter build ios --release --no-codesign
+    artifacts:
+      - build/ios/ipa/*.ipa
+    publishing:
+      web_download: true
+    code_signing:
+      ios:
+        distribution_type: app-store
+        provisioning_profile_path: ./profiles/YourProfile.mobileprovision
+        certificate_path: ./certs/YourCertificate.p12
+        certificate_password: $CERT_PASSWORD
+        automatic_signing: false
