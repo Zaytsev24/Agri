@@ -1,3 +1,3 @@
 class NotificationService {
-  // Здесь функции уведомлений
+  // Здесь можно подключить flutter_local_notifications для напоминаний и задач
 }
